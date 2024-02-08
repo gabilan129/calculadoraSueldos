@@ -104,7 +104,3 @@ btnSuma.addEventListener("click", () => {
 
 
 
-//?sacar descuentoTotal de la suma de total hacerlo aparte
-//?colocar el valor real a los descuentos
-//?total debe multiplicarse por los descuentos luego dividirse por 100 y despues ese valor se debe de restar al total original
-//!logica de los feriados el feriado es el valor de el total bruto multiplicado por 2
