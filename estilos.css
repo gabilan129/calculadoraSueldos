@@ -23,3 +23,20 @@ body{
     border-radius: 10px;
     text-align: center;
 }
+
+.nochebtn{
+    background-color: black;
+    color: whitesmoke;
+}
+
+.noche{
+    background-color: black;
+    color: whitesmoke;
+    
+        .cartel{
+            background-color: rgba(88, 85, 82, 0.385);
+            color: aliceblue;
+        } 
+        
+        
+}

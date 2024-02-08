@@ -11,19 +11,19 @@
         <h1>PRACTICA CALCULADO DE SUELDO</h1>
         <div class="calculadora">
             
+            <button class="nochebtn">MODO OSCURO</button>
 
-            <label for="descuentosExtra">descuento extra</label>
-            <input type="number" id="descuentosExtra">
-            <br>
+
             <label for="antiguedad">ANTIGUEDAD</label>
-            <input type="number" id="antiguedad">
+            <input type="number" id="antiguedad"  value="0">
             <br>
             <label for="sueldo">SUELDO</label>
-            <input type="number" id="sueldo">
+            <input type="number" id="sueldo" value="0">
             <br>
             <label for="feriado">FERIADOS</label>
-            <input type="number" id="feriado">
+            <input type="number" id="feriado" value="0">
             <br>
+            <h2>descuentos</h2>
             <label for="descuentos">Jubilacion 11</label>
             <input type="checkbox" id="descuentos" value="11">
             <br>
@@ -38,7 +38,10 @@
             <br>
             <label for="descuentos">Promocion Social</label>
             <input type="checkbox" id="descuentos" value="1">
-            
+            <br>
+            <label for="descuentosExtra">descuento extra</label>
+            <input type="number" id="descuentosExtra" value="0" >
+            <br>
         </div>
         <button  id="btnSuma">Sumar</button>
         <button id="btnAgregar">Agregar descuento</button>

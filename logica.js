@@ -1,27 +1,32 @@
-const sueldo = document.querySelector("#sueldo")
-const antiguedad = document.querySelector("#antiguedad")
-const descuentos = document.querySelectorAll("#descuentos")
-const descuentoExtra = document.querySelector("#descuentosExtra")
-const btnSuma = document.querySelector("#btnSuma")
-const cartel = document.querySelector(".textoCartel")
-const feriado = document.querySelector("#feriado")
-const calculadora = document.querySelector(".calculadora")
-const btnAgregar = document.querySelector("#btnAgregar")
+document.addEventListener("DOMContentLoaded",function() {
 
+    
+    
+    const sueldo = document.querySelector("#sueldo")
+    const antiguedad = document.querySelector("#antiguedad")
+    const descuentos = document.querySelectorAll("#descuentos")
+    const descuentoExtra = document.querySelector("#descuentosExtra")
+    const btnSuma = document.querySelector("#btnSuma")
+    const cartel = document.querySelector(".textoCartel")
+    const feriado = document.querySelector("#feriado")
+    const calculadora = document.querySelector(".calculadora")
+    const btnAgregar = document.querySelector("#btnAgregar")
+    const btnNoche = document.querySelector(".nochebtn")
+    const body = document.querySelector("body")
 
-let descuentosTotal = 0
+    let descuentosTotal = 0
+    
+    console.log(descuentosTotal)
+    
+    function fundescuento() {
 
-console.log(descuentosTotal)
-
-function fundescuento() {
-
-    descuentos.forEach((descuento) => {
-        if (descuento.checked == true) {
-            descuentosTotal += parseFloat(descuento.value)
-
-        }
-    })
-}
+        descuentos.forEach((descuento) => {
+            if (descuento.checked == true) {
+                descuentosTotal += parseFloat(descuento.value)
+                
+            }
+        })
+    }
 function botonDeAgregar(){
 
     //? btnAgregar Descuento extra fin inicio crear un elemento nuevo para descuento
@@ -65,12 +70,12 @@ function botonDeAgregar(){
     
 } // no funciona asi que no lo estoy llamando en ningun lado
 
-    
+
 let descuentosATotal = 0
 
 btnSuma.addEventListener("click", () => {
     if (cartel.textContent == "" && feriado.value > 0) {
-
+        
         fundescuento()
         let total = parseInt(sueldo.value) + (parseInt(antiguedad.value) * 8063)
         let horaSimple = (total / 192) * 2
@@ -86,7 +91,7 @@ btnSuma.addEventListener("click", () => {
         console.log(total)
     } else if (cartel.textContent == "") {
         fundescuento()
-
+        
         let total = parseInt(sueldo.value) + (parseInt(antiguedad.value) * 8063)
         let totalConDescuento = (total * descuentosTotal) / 100
         let totalGeneral = totalConDescuento - descuentoExtra.value
@@ -98,9 +103,38 @@ btnSuma.addEventListener("click", () => {
     } else {
         console.log("Actualmente ya hay un valor reinicie la calculadora")
         window.location.reload(); // funcion que reinicia el DOM
-
+        
     }
 })
 
+
+ btnNoche.addEventListener("click",modonoche)
+
+function modonoche(){
+    
+ if(body.classList.contains("noche") ){
+     console.log("modo noche no activado")
+     body.classList.remove("noche")
+     
+    }else{
+        console.log("modo noche activado")
+        body.classList.add("noche")
+        
+ }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+})
 
 
